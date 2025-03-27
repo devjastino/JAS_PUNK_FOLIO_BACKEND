@@ -1,6 +1,6 @@
 import { connect, MongooseError } from "mongoose";
 const DB_URI: string =
-  process.env.DB_URI || "mongodb://localhost:27017/jas-punk-folio";
+  process.env.DB_URI || "mongodb+srv://dev_jas:Jas_080794@cluster0.lmum97n.mongodb.net/jas-punk-folio";
 import { COLLECTIONS } from "../database/db.context";
 
 const INITIALIZED_COLLECTIONS: Function = async (
