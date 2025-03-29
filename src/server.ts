@@ -4,6 +4,7 @@ import { ResponseDto } from "./constants/response.dto";
 import { RESPONSE } from "./utils/response.utils";
 import { DATABASE_CONNECTION } from "./config/db.config";
 import { AboutRoute } from "./modules/about-modules/routes/about.route";
+import { PortfolioRoute } from "./modules/portfolio-modules/routes/portfolio.route";
 const PORT: number =
   process.env.PORT !== undefined ? parseInt(process.env.PORT) : 5000;
 const app: Express = express();
@@ -23,6 +24,7 @@ app.get("/", async (req: Request, res: Response): Promise<void> => {
 
 //Routes:
 app.use("/about", AboutRoute);
+app.use("/portfolio", PortfolioRoute)
 
 app.listen(PORT, async () => {
   await DATABASE_CONNECTION();
